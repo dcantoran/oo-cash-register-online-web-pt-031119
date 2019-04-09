@@ -9,6 +9,7 @@ class CashRegister
   
   def add_item(title, price, quantity=1)
     self.total += price * quantity
+    @last_trans = @total
     while quantity > 0 
       @items << title 
       quantity -= 1
